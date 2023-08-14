@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: rgba(220, 247, 255, 0.9);
+            min-width: 270px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            color: green;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        .zoom {
+            padding: 0px;   
+            transition: transform .2s; /* Animation */       
+            margin: 0 auto; 
+        }
+
+        .zoom:hover {
+            transform: scale(1.08); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            box-shadow: 0px 0px 0px 0.5px rgb(1, 252, 43);
+            background-color: #f0f0f0;      
+        }
+
+        a:hover {
+            color: rgb(57, 250, 9);
+            transform: scale(1.25); 
+        }
+        
+        a { 
+            color: white; 
+            text-decoration: none;
+        }  
+
+        .find{
+            opacity: 0.23;
+        }
+
+        .find:hover{
+            opacity: 1;
+        }
+
+        body {
+            margin: 0;
+        }
+      
+        .images {       
+            display: none;
+        }
+      
+        image {
+            max-width:100%;
+            height:auto;
+        }
+      
+        /* Slideshow container */
+        .carousel-container {
+            align-content: center;
+            max-width:100%;
+            height:auto;
+            position: relative;
+            margin: auto;
+        }
+      
+    
+        .slider-carousel img {
+            width: 100%;
+            transition: all 0.3s ease;
+            border:8px solid white;
+        }
+
+        /* Next & previous buttons */
+        .previous, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.4s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+      
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+      
+      
+        /* On hover, add a black background color with a little bit seethrough */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+         }
+      
+      
+        /* The dots/bullets/indicators */
+        .navigation-dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .navigation-dot:hover {
+            background-color: #717171;
+        }
+
+    </style>
+
+   <title>Rannz Collections</title>
+   <link rel="icon" type="image/x-icon" href="Images\Natobotics-logo.jpg" >
+
+</head>
+<body bgcolor="#f0f0f0">
+
+    <table border="0" width="100%" bgcolor="#2874F0">
+    <tr style="color:white;">
+       <!-- <td width="5" align="center"><img src="Images\sidebar-icon-1.png" height="80px"></td>-->
+        <td align="right" width="25%" ><img src="Images\Rannz_logo.jpg" height="80px"></td>
+        <td><input 
+                type="search" 
+                style="width:640px;height:34px; border-top-left-radius: 5px; border-bottom-left-radius: 5px;" 
+                placeholder="Search for products, brands and more"
+                >
+                <button 
+                    style="background-color: white; 
+                    border-color:white; 
+                    border-top-right-radius: 5px; 
+                    border-bottom-right-radius: 5px; 
+                    color:rgb(20, 20, 250); 
+                    height:37px;" 
+                    >
+                    Search
+                </button>
+        </td>
+        <th style="width:200px;height:30px"><a href="#" id="login-and-signup" onclick=" document.location=this.id+'.html';return false;" class="a">Login & Signup</a></th>
+        <th style="width:200px;height:30px"><a href="#" id="Rannz" onclick=" document.location=this.id+'.html';return false;" class="a">Home</a></th>
+        <th style="width:200px;height:30px"><font color="white"><a href="#" id="cart" onclick=" document.location=this.id+'.html';return false;" class="a" ><img src="Images\cart.png" height="60px"></a></th>
+    </tr>
+    </table>
+   
+<br>
+<table border="0" width="100%" bgcolor="white">
+    <tr style="margin-left:30px"><th colspan="5" ><h1>Lehenga</h1></th></tr>
+    <tr>
+        <th>
+             <!-- <img src="Images\Lehenga-01" alt="Lehenga" width="563px" height="420px"/> -->
+         </th>
+ 
+         <th>
+             <!-- <img src="Images\Lehenga-02" alt="Lehenga" width="563px" height="420px"/> -->
+         </th>
+         
+         <th>
+             <!-- <img src="Images\Lehenga-03" alt="Lehenga" width="563px" height="420px"/> -->
+         </th>
+     </tr>
+     <tr>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+    </tr>
+    <tr>
+       <th>
+            <img src="Images\category icon-lehengas.webp" alt="kurta" width="563px" height="420px"/>
+        </th>
+
+        <th>
+            <img src="Images\lehenga-02.jpg" alt="lehengas" width="563px" height="420px"/>
+        </th>
+        
+        <th>
+            <img src="Images\stay tuned coming soon.webp" alt="sarees" width="563px" height="420px"/>
+        </th>
+    </tr> 
+    <tr>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+    </tr>  
+</table>
+
+<table border="0" width="100%" bgcolor="white">
+    <tr style="margin-top:15px">
+        <th>
+             <!-- <img src="Images\Lehenga-04.webp" alt="Lehenga" width="563px" height="420px" /> -->
+         </th>
+ 
+         <th>
+             <!-- <img src="Images\Lehenga-05.webp" alt="Lehenga" width="563px" height="420px"  /> -->
+         </th>
+         
+         <th>
+             <!-- <img src="Images\Lehenga-06.webp" alt="Lehenga" width="563px" height="420px"  /> -->
+         </th>
+     </tr> 
+    <tr>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+        <th style="color:rgb(3, 224, 224);font-size:24px; " width="200px" height="65px"></th>
+    </tr>   
+</table>
+
+<table border="0" width="100%" bgcolor="#f0f0f0" style="padding:8px;">
+    <tr><td style="color:grey;font-size:24px;" ><b>Connect with us</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+    <tr>
+        <td style="color:rgb(51, 48, 48);font-size:24px;" width="320px" margin-top="30px"><b>Subscribe to our Newsletter</b></td>      
+    </tr>
+    <tr>
+        <td width="15%" style="color:black;font-size:16px;" width="320px">Don't miss out on seasonal health tips, new blogs, product launches and many more!</td>  
+        
+        <td width="20%"><input type="text" style="width:180px;height:28px" placeholder="email" ><button style="background-color: #000000; color:#39FF14; height:28px;" >Subscribe</button></td>
+        <td width="10%"></td>
+        <th width="23%" style="text-align:end; margin-left:1450px;">Reach out to us @</th>
+        <th width="3%"><a href="https://www.facebook.com/RanzCollections" target="_blank"><img src="Images\facebook.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;" ></a></th>
+        <th width="3%"><a href="https://wa.me/+14165681615" target="_blank"><img src="Images\Whatsapp.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;"></a></th>
+        <th width="3%"><a href="https://twitter.com/RanzCollections" target="_blank"><img src="Images\twitter.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;"></a></th>
+        <th width="3%"><img src="Images\Instagram.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;"></th>
+        <th width="3%"><img src="Images\Linkedin.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;"></th>
+        <th width="3%"><img src="Images\Pintrest.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;"></th>
+        <th width="3%"><img src="Images\Snapchat.jpg" width="35px" height="35px" style="margin-left:5px; margin-bottom:5px;"></th>
+        </td>
+    </tr>
+</table>
+<br>
+
+<table border="0" width="100%" bgcolor="#f0f0f0" style="padding:8px;">
+    <tr>
+        <td style="color:rgb(77, 74, 74);font-size:24px;" width="8%"><b>Our Location</b></td>      
+    </tr>
+    <tr>  
+        <td width="2%"><img src="Images\Address.png" style="height:50px; margin-left: 50px;"></td>  
+        <td width="25%" style="color:black;font-size:20px;">12 Hallam Road Ajax. Ontario L1Z 0S5. Canada</td>
+        <td width="38%"></td>
+        <td width="5%"></td>
+        <td width="5%"></td>
+        <td width="12%"></td>
+        <td width="8%" style="color:#ff5e01; text-align:right; margin-right:-5px;"><h2>Powered by</h2></td>
+        <td rowspan="2" width="12%"><a href="http://www.natobotics.com" target="_blank" >
+            <img src="Images\Natobotics-logo.jpg" width="70px" height="70px"  style="margin-left:5px;">
+        </a></td>
+    </tr>
+</table>
+
+<table border="0"  width="100%" style="padding:8px;">
+    <tr>
+        <td width="11%" style="color:#0d22dac4;"><a href="tel:+14165681615"><img src="Images\call-us.png" style="height:33px; opacity: 0.85;"></a></td>
+        <td width="2%">Or</td>
+        <td width="25%" style="margin-left:-5px;"><a href="mailto:rannzcollections@gmail.com" ><img src="Images\email.jpg" style="height:28px; opacity: 0.87;"></a></td>
+        <td width="30%"></td>
+        <td width="5%"></td>
+        <td width="5%"></td>
+        <td width="13%"></td>
+        <th width="7%"><h3 style=" opacity: 0.3;">Developed by</h3></th>
+        <td width="12%"><a href="https://www.linkedin.com/in/pankajq72/" target="_blank" >
+            <img src="Images\Pankaj.jpg"   style="margin-left:5px; width:65px; height:65px;" class="find">
+        </a> </td>
+    </tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#000000">
+    <tr style="color:#39FF14"><th>© 2023 Natobotics Technologies Pvt Ltd.</th></tr>
+    <tr style="color:gray;"><th>All Rights Reserved</th></tr>
+</table>
+
+</body>
+</html>
